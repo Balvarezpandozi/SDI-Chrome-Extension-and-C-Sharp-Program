@@ -6,7 +6,7 @@ Visual Studio will not compile the browser extension, but it will be used for th
 
 ### Project 1: Browser Extension
 
-Specifications:
+#### Specifications:
 - Write a Chrome v3 manifest browser extension that hosts a REST API on port 3000 named get-selector. 
 The browser extension should present a button to turn the API on and off and, in a toaster notification provide feedback that turning it on/off succeeds. 
 
@@ -14,7 +14,13 @@ The browser extension should present a button to turn the API on and off and, in
 
 - When the API is on, when a GET request is sent to the API get-selector, it will present an input to type in a name, then return the name via the API. 
 
-- Bonus: make the same code work in Firefox and Chrome 
+- Bonus: make the same code work in Firefox and Chrome
+
+#### Instructions: for Chrome Installation
+- Once this code is downloaded to your local computer, open up google chrome.
+- Enter the following on a new tab url: chrome://extensions
+- Enable developer mode by toggling button "Developer Mode"
+- Click the Load unpacked button and select the extension directory.
 
 ### Project 2: C# Application
 Specifications:
