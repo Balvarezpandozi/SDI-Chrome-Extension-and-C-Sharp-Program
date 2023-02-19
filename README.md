@@ -17,10 +17,10 @@ The browser extension should present a button to turn the API on and off and, in
 - Bonus: make the same code work in Firefox and Chrome
 
 #### Instructions: for Chrome Installation
-- Once this code is downloaded to your local computer, open up google chrome.
-- Enter the following on a new tab url: chrome://extensions
-- Enable developer mode by toggling button "Developer Mode"
-- Click the Load unpacked button and select the extension directory.
+1- Once this code is downloaded to your local computer, open up google chrome.
+2- Enter the following on a new tab url: chrome://extensions
+3- Enable developer mode by toggling button "Developer Mode"
+4- Click the Load unpacked button and select the extension directory.
 
 ### Project 2: C# Application
 Specifications:
