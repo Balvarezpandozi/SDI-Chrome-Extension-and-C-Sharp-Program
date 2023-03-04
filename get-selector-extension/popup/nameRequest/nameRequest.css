@@ -1,0 +1,40 @@
+body {
+    width: 250px;
+    text-align: center;
+    background: rgb(48, 48, 48);
+    color: rgb(255, 255, 255);
+}
+
+input, label {
+    display: block;
+}
+
+label {
+    font-size: 1.25rem;
+}
+
+input {
+    width: 80%;
+    height: 2rem;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 1rem;
+    border-radius: 20px;
+}
+
+button {
+    width: 80%;
+    height: 2rem;
+    border-radius: 20px;
+    margin-top: 1rem;
+    background: rgb(48, 48, 48);
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+    button:hover {
+        box-shadow: 0px 0px 5px rgb(255, 255, 255);
+        transform: scale(1.1);
+    }

@@ -1,0 +1,9 @@
+{
+  "name": "getselectorapi",
+  "description": "C# application to interact with chrome extension get-selector",
+  "path": "C:\\Users\\bdap1\\OneDrive\\Documents\\BryanAlvarezBrand\\SDI-Chrome-Extension-and-C-Sharp-Program\\get-selector-api\\bin\\Debug\\net6.0\\get-selector-api.exe",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://adlmkkihljcenoabcfkelgfepjbjiild/"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "get-selector-extension",
+  "description": "Hosts API on port 3000, able to turn on and off and receive data when API is called",
+  "version": "0.1.0",
+  "action": {
+    "default_popup": "./popup/default/index.html"
+  },
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "permissions": [ "nativeMessaging", "notifications" ],
+  "host_permissions": [ "http://localhost:3000/*" ]
+}

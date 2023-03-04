@@ -1,0 +1,64 @@
+body {
+    width: 250px;
+    text-align: center;
+    background: rgb(48, 48, 48);
+    color: rgb(255, 255, 255);
+}
+
+#turn-on-off-btn {
+    position: relative;
+    margin: auto;
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    transition: all 0.25s ease;
+}
+
+.slider {
+    position: absolute;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    top: 3px;
+    transition: all 0.5s ease;
+}
+
+.status-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    position: absolute;
+    font-size: 20px;
+    top: 5px;
+    font-weight: bold;
+}
+
+.off-button {
+    border: 2px solid rgb(255, 76, 76);
+    box-shadow: 0px 0px 5px rgb(255, 76, 76);
+}
+
+.off-slider {
+    background: rgb(255, 76, 76);
+    transform: translateX(3px);
+}
+
+.off-status-label {
+    right: 10px;
+}
+
+.on-button {
+    border: 2px solid rgb(91, 255, 100);
+    box-shadow: 0px 0px 5px rgb(91, 255, 100);
+}
+
+.on-slider {
+    background: rgb(91, 255, 100);
+    transform: translateX(84px);
+}
+
+.on-status-label {
+    left: 10px;
+}

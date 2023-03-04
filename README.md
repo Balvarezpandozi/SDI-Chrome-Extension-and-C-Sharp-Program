@@ -21,6 +21,8 @@ The browser extension should present a button to turn the API on and off and, in
 2. Enter the following on a new tab url: chrome://extensions
 3. Enable developer mode by toggling button "Developer Mode"
 4. Click the Load unpacked button and select the extension directory.
+5. Now, the extension should appear as one option
+6. After performing changes to the code, click the reload button on the extension to refresh it.
 
 ### Project 2: C# Application
 Specifications:
