@@ -40,20 +40,20 @@ obtains the information and outputs it on a list on the main form of the app.
 
 ##Installation Instructions:
 ### Chrome Extension Installation:
-1- Once this code is downloaded to your local computer, open up google chrome.
-2- Enter the following on a new tab url: chrome://extensions
-3- Enable developer mode by toggling button "Developer Mode"
-4- Click the Load unpacked button and select the extension directory.
-5- Now, the extension should appear as one option
-6- After performing changes to the code, click the reload button on the extension to refresh it.
+1. Once this code is downloaded to your local computer, open up google chrome.
+2. Enter the following on a new tab url: chrome://extensions
+3. Enable developer mode by toggling button "Developer Mode"
+4. Click the Load unpacked button and select the extension directory.
+5. Now, the extension should appear as one option
+6. After performing changes to the code, click the reload button on the extension to refresh it.
 Note: The application will not work until the API is install and configured as explained in the following instructions.
 
 ### API Installation:
-1- Change the path on the file "getselectorapi.reg" in the get-selector-api folder to the following:
+1. Change the path on the file "getselectorapi.reg" in the get-selector-api folder to the following:
 @="your \\ path \\SDI-Chrome-Extension-and-C-Sharp-Program\\get-selector-api\\get-selector-manifest.json:"
-2- Run the getselectorapi.reg file
-3- Run the install.sh file on the top level of the directory to build both the get-selector-api and the get-selector-app
-4- Change path property on the get-selector-manifest.json to the location of the executable file of the get-selector-api as follows
+2. Run the getselectorapi.reg file
+3. Run the install.sh file on the top level of the directory to build both the get-selector-api and the get-selector-app
+4. Change path property on the get-selector-manifest.json to the location of the executable file of the get-selector-api as follows
 "path": "your \\ path \\SDI-Chrome-Extension-and-C-Sharp-Program\\get-selector-api\\bin\\Debug\\net6.0\\get-selector-api.exe"
 
 ### Windows Form Installation:
