@@ -12,7 +12,7 @@ const connectApi = () => {
                 focused: true,
                 height: 300,
                 width: 300,
-                url: './popup/nameRequest/nameRequest.html',
+                url: './popup/nameRequestForm/nameRequestForm.html',
                 type: 'popup'
             });
         }
@@ -58,8 +58,4 @@ const messageController = (request, _sender, sendResponse) => {
     }
 }
 
-
-
 chrome.runtime.onMessage.addListener(messageController)
-
-console.log("Ran without errors")
