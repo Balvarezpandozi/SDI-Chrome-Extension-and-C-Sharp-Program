@@ -58,3 +58,7 @@ Note: The application will not work until the API is install and configured as e
 
 ### Windows Form Installation:
 No further instructions. To open this application, open the executable located in -> `SDI-Chrome-Extension-and-C-Sharp-Program\get-selector-app\bin\Debug\net6.0\get-selector-api.exe`
+
+## Issues
+1. When a name is requested and the user just closes the popup window the native app does not receives any response and idles until the http request answers as failed. 
+Once this happens and a name is requested again the native app is not able to process it.

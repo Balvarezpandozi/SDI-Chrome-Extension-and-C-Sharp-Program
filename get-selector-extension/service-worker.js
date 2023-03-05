@@ -1,25 +1,6 @@
 let apiPort = null;
 
-const connectApi = () => {
-    port = chrome.runtime.connectNative('getselectorapi');
-    port.onDisconnect.addListener(() => {
-        console.log("Disconnected Native App")
-        apiPort = null;
-    })
-    port.onMessage.addListener(function (response) {
-        if (response["request"] == "getName") {
-            chrome.windows.create({
-                focused: true,
-                height: 300,
-                width: 300,
-                url: './popup/nameRequestForm/nameRequestForm.html',
-                type: 'popup'
-            });
-        }
-    });
-    return port;
-}
-
+//Creates notifications, takes 1 parameter which is the message to show in the notification
 const notify = (message) => {
     chrome.notifications.create('', {
         title: "Get Selector",
@@ -29,6 +10,31 @@ const notify = (message) => {
     });
 }
 
+//Creates pop up to request a name
+const createNameRequestPopUp = (response) => {
+    if (response["request"] == "getName") {
+        chrome.windows.create({
+            focused: true,
+            height: 300,
+            width: 300,
+            url: './popup/nameRequestForm/nameRequestForm.html',
+            type: 'popup'
+        });
+    }
+}
+
+//Sets the Native messaging between extension and API
+const connectApi = () => {
+    port = chrome.runtime.connectNative('getselectorapi');
+    port.onDisconnect.addListener(() => {
+        apiPort = null;
+    })
+    port.onMessage.addListener(createNameRequestPopUp);
+    return port;
+}
+
+
+//Turns API ON/OFF
 const toggleAPI = () => {
     if (apiPort == null) {
         apiPort = connectApi();
@@ -41,6 +47,7 @@ const toggleAPI = () => {
     return false;
 }
 
+//Manages communication between service worker and popups
 const messageController = (request, _sender, sendResponse) => {
     switch (request.type) {
         case "toggle-api":
@@ -53,6 +60,7 @@ const messageController = (request, _sender, sendResponse) => {
         case "info":
             if (apiPort != null) apiPort.postMessage(request);
             sendResponse();
+            break;
         default:
             break;
     }

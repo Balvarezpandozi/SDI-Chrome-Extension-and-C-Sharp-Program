@@ -2,6 +2,7 @@
 
 public class NativeMessageManager
 {
+    //Sends message to chrome extension
     public void SendMessage(string outString)
     {
         string msgdata = outString;
@@ -14,6 +15,7 @@ public class NativeMessageManager
         Console.Write(msgdata);
     }
 
+    //Receives message from chrome extension
     public string ReceiveMessage()
     {
         Stream stdin = Console.OpenStandardInput();
@@ -26,7 +28,6 @@ public class NativeMessageManager
         {
             input += (char)stdin.ReadByte();
         }
-        
         JObject Read = Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(input);
         if (Read is null) throw new ArgumentNullException(); 
         return Read.ToString();

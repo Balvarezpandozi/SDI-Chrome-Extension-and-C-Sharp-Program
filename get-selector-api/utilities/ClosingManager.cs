@@ -10,6 +10,7 @@ namespace get_selector_api
             new Task(checkGoogleChromeIsOpen).Start();
         }
 
+        // Kills the API when chrome is closed on the local device
         private void checkGoogleChromeIsOpen()
         {
             while (true)
